@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Livewire\Cliente;
+namespace App\Livewire\Admin\Cliente;
 
 use App\Models\Cliente;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
 
-class Create extends Component
+class ClienteCreate extends Component
 {
+
     public $nome;
     public $endereco;
     public $telefone;
@@ -67,6 +68,6 @@ class Create extends Component
 
     public function render()
     {
-        return view('livewire.cliente.create');
+        return view('livewire.admin.cliente.cliente-create');
     }
 }

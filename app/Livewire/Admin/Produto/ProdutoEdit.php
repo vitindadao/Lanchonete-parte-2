@@ -1,14 +1,12 @@
 <?php
 
-namespace App\Livewire\Produto;
+namespace App\Livewire\Admin\Produto;
 
 use App\Models\Produto;
 use Livewire\Component;
-use Livewire\WithFileUploads;
 
-class Edit extends Component
+class ProdutoEdit extends Component
 {
-    use WithFileUploads;
 
     public $produtoId;
     public $nome;
@@ -78,8 +76,9 @@ class Edit extends Component
         session()->flash('message', 'Produto atualizado com sucesso!');
     }
 
+
     public function render()
     {
-        return view('livewire.produto.edit');
+        return view('livewire.admin.produto.produto-edit');
     }
 }

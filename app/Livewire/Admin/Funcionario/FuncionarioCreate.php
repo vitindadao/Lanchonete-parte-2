@@ -1,14 +1,11 @@
 <?php
 
-namespace App\Livewire\Funcionario;
+namespace App\Livewire\Admin\Funcionario;
 
 use Livewire\Component;
-use App\Models\Produto; // Certifique-se de que o modelo Produto está importado
-use Livewire\WithFileUploads;
 
-class Create extends Component
+class FuncionarioCreate extends Component
 {
-    use WithFileUploads; // Permite o upload de arquivos
 
     public $nome;
     public $cpf; // Propriedade pública para CPF
@@ -67,6 +64,6 @@ class Create extends Component
 
     public function render()
     {
-        return view('livewire.funcionario.create');
+        return view('livewire.admin.funcionario.funcionario-create');
     }
 }

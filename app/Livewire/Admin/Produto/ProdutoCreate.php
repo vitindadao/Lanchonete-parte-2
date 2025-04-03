@@ -1,14 +1,12 @@
 <?php
 
-namespace App\Livewire\Produto;
+namespace App\Livewire\Admin\Produto;
 
 use App\Models\Produto;
 use Livewire\Component;
-use Livewire\WithFileUploads;
 
-class Create extends Component
+class ProdutoCreate extends Component
 {
-    use WithFileUploads; // Para suportar upload de imagem
 
     public $nome;
     public $ingredientes;
@@ -59,8 +57,9 @@ class Create extends Component
         $this->imagem = '';
     }
 
+
     public function render()
     {
-        return view('livewire.produto.create');
+        return view('livewire.admin.produto.produto-create');
     }
 }

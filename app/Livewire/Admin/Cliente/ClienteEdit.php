@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Livewire\Cliente;
+namespace App\Livewire\Admin\Cliente;
 
 use App\Models\Cliente;
 use Livewire\Component;
 
-class Edit extends Component
-{   
+class ClienteEdit extends Component
+{
     public $clienteId;
     public $nome;
     public $endereco;
@@ -56,10 +56,6 @@ class Edit extends Component
         $this->dispatch('hideModal');
     }
 
-    public function render()
-    {
-        return view('livewire.cliente.edit');
-    }
 
     public function mount($id){
         $cliente = Cliente::find($id);
@@ -90,4 +86,11 @@ class Edit extends Component
 
         session()->flash('message', 'Cliente Atualizado');
     }
+    
+    public function render()
+    {
+        return view('livewire.admin.cliente.cliente-edit');
+    }
 }
+
+
